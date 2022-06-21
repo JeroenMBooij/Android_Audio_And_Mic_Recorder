@@ -1,6 +1,6 @@
 # Soundpad
 
-Android Native App written with .NET Maui.
+<img src="https://miro.medium.com/max/1400/0*OsrkVI4kEjkWxAPN.png" />Android Native App written with .NET Maui.
 
 ## features
 - digitally recording sounds
