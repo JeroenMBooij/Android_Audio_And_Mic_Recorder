@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28">
+  <g id="play_button" transform="translate(30) rotate(90)" fill="#0f3">
+    <path d="M 27.21490478515625 29.5 L 0.7850953340530396 29.5 L 14 1.182347178459167 L 27.21490478515625 29.5 Z" stroke="none"/>
+    <path d="M 14 2.364704132080078 L 1.570196151733398 29 L 26.4298038482666 29 L 14 2.364704132080078 M 14 0 L 28 30 L 0 30 L 14 0 Z" stroke="none" fill="#707070"/>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+﻿@page "/sound-board/{categoryId}"
+
+
+@if (@Category is not null)
+{
+    <h3>@Category.Name Sounds</h3>
+
+        <MatAccordion class="mb-4">
+            <MatExpansionPanel @bind-Expanded="@PanelOpenState">
+                <MatExpansionPanelSummary>
+                    <MatExpansionPanelSubHeader >
+                       @(PanelOpenState ? "Close" : "Open") Settings
+                    </MatExpansionPanelSubHeader>
+                </MatExpansionPanelSummary>
+                <MatExpansionPanelDetails>
+                    <EditForm EditContext="@EditContext">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p>Recording</p>
+                                <div>
+                                    <MatCheckbox @bind-Value="@SS.RecordSpeakers">Speakers</MatCheckbox>
+                                </div>
+                                <div>
+                                    <MatCheckbox  @bind-Value="@SS.RecordMicrophone">Microphone</MatCheckbox>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p>Playback</p>
+                                <div>
+                                    <MatCheckbox  @bind-Value="@SS.PlaybackSpeakers">Speakers</MatCheckbox>
+                                </div>
+                                <div>
+                                    <MatCheckbox @bind-Value="@SS.PlaybackMicrophone">Microphone</MatCheckbox>
+                                </div>
+                            </div>
+                        </div>
+                    </EditForm>
+                </MatExpansionPanelDetails>
+            </MatExpansionPanel>
+        </MatAccordion>
+
+    <div class="list-container">
+        @foreach (SoundModel sound in Category.Sounds)
+        {
+            <MatCard class="p-2 mb-3">
+                <MatCardContent >
+                    <div class="d-flex justify-content-between">
+                        <div class="text-center " style="min-width: 60px;">
+                            @if (sound.Id.Equals(Audio.SoundId))
+                            {
+                                <div class="sp sp-bars" @onclick="() => StopPlayback()"></div>
+                            }
+                            else
+                            {
+                                <img class="mt-4" src="/images/play_button.svg" @onclick="() => StartPlayback(sound.Id)" />
+                            }
+                        </div>
+                        <div class="pl-2 pr-2">
+                            <MatHeadline6 class="demo-mat-card-clean-margin">
+                                @sound.Name
+                            </MatHeadline6>
+                            <div class="d-flex justify-content-around">
+                                <MatSubtitle2>
+                                    @sound.RecordedAt.ToShortDateString()
+                                </MatSubtitle2>
+                                <MatSubtitle2>
+                                    @sound.Duration.ToString()
+                                </MatSubtitle2>
+                            </div>
+                        </div>
+                        <img src="/images/action_button.svg"/>
+                    </div>
+                </MatCardContent>
+            </MatCard>
+        }
+
+        @if(IsRecording == false)
+        {
+           <img src="images/record_speakers_button.svg" @onclick="StartRecording" class="record-button" height="60"/> 
+        }
+        else
+        {
+            <img src="images/stop_recording_button.svg" @onclick="StopRecording" class="record-button" height="60"/>
+        }
+    </div>
+}
+else
+{
+
+}

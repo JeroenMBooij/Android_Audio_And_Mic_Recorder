@@ -1,0 +1,33 @@
+﻿@page "/categories/create"
+
+<h3>Create Category</h3>
+
+
+<div class="body-container d-flex flex-column justify-content-between">
+    
+    <div class="d-flex flex-column mt-5">
+        <!--TODO FIX STUPID VALIDATION BORDER-->
+        <MatStringField  Label="Name" @bind-Value="Category.Name"/>
+        @if (string.IsNullOrEmpty(Error) == false)
+        {
+            <span class="text-danger">@Error</span>
+        }
+
+        <MatButton OnClick="CreateCategory" Type="submit" Raised="true" class="mt-5">Create</MatButton>
+    </div>
+
+    <MatButton OnClick="Cancel" Raised="true" class="mb-5" Style="background-color: red">Cancel</MatButton>
+</div>
+
+
+<style>
+    .input-error {
+        display: inline-block !important;
+        border: 1px solid red !important;
+    }
+    
+    .input-warning {
+        display: inline-block !important;
+        border: 1px solid orange !important;
+    }
+</style>

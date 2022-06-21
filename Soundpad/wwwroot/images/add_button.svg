@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f563fa"/>
+      <stop offset="1" stop-color="#55014f"/>
+    </linearGradient>
+  </defs>
+  <g id="AddButton" transform="translate(-312 -822)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(312 822)" stroke="#707070" stroke-width="1" fill="url(#linear-gradient)">
+      <circle cx="37.5" cy="37.5" r="37.5" stroke="none"/>
+      <circle cx="37.5" cy="37.5" r="37" fill="none"/>
+    </g>
+    <rect id="Rectangle_16" data-name="Rectangle 16" width="3" height="57" transform="translate(348 831)" fill="#fff"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="3" height="57" transform="translate(378 858) rotate(90)" fill="#fff"/>
+  </g>
+</svg>

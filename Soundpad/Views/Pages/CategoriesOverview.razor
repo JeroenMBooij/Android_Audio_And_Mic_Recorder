@@ -1,0 +1,16 @@
+﻿@page "/"
+
+
+<h3>Categories</h3>
+
+<div class="list-container">
+    <MatList>
+        @foreach(CategoryModel category in Categories)
+        {
+            <MatListItem Href="@category.SoundboardUrl">@category.Name</MatListItem>
+        }
+    </MatList>
+    <a href="/categories/create" class="add-button">
+        <img src="images/add_button.svg" height="60"/>
+    </a>
+</div>
