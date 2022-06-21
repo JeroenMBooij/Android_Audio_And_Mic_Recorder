@@ -1,6 +1,5 @@
-
-<img src="https://miro.medium.com/max/1400/0*OsrkVI4kEjkWxAPN.png" height="100"/>
 # Soundpad
+<img src="https://miro.medium.com/max/1400/0*OsrkVI4kEjkWxAPN.png" height="100"/>
 <i>Android Native App written with .NET Maui.</i>
 
 ## features
