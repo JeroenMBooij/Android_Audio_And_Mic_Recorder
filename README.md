@@ -1,8 +1,7 @@
 # Soundpad
-<div style="display: flex;">
-  <img src="https://miro.medium.com/max/1400/0*OsrkVI4kEjkWxAPN.png" height="100"/>
-  <p>Android Native App written with .NET Maui.</p>
-</div>
+
+<img src="https://miro.medium.com/max/1400/0*OsrkVI4kEjkWxAPN.png" height="100"/>
+<i>Android Native App written with .NET Maui.</i>
 
 ## features
 - digitally recording sounds
