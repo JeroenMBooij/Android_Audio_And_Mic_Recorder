@@ -6,7 +6,9 @@ Android Native App written with .NET Maui.
 - digitally recording sounds
   - from speakers
   - from microphone
-  <br/>  
+  </br>  
 - digitally playing recorded sounds
   - over microphone 
   - over speakers
+  </br>
+- Picuture-in-Picture mode
